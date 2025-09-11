@@ -17,7 +17,10 @@ const RegisterPage = () => {
                 <Button variant="contained">Sign up</Button>
             </form>
             <p className="mt-4">
-                Already have an account? <Link to="/login">Sign in instead</Link>
+                Already have an account?{' '}
+                <Link to="/login" className="text-dark-100">
+                    Sign in instead
+                </Link>
             </p>
         </div>
     );

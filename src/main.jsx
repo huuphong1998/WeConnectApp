@@ -7,8 +7,9 @@ import { lazy } from 'react';
 import { ThemeProvider } from '@mui/material';
 const HomePage = lazy(() => import('@pages/HomePage'));
 import theme from './configs/muiConfig';
-import RegisterPage from '@pages/RegisterPage';
-import AuthLayout from '@pages/AuthLayout';
+import RegisterPage from '@pages/auth/RegisterPage';
+import AuthLayout from '@pages/auth/AuthLayout';
+import LoginPage from '@pages/auth/LoginPage';
 
 const router = createBrowserRouter([
     {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
                     {
                         path: '/register',
                         element: <RegisterPage />,
+                    },
+                    {
+                        path: '/login',
+                        element: <LoginPage />,
                     },
                 ],
             },

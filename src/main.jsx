@@ -8,6 +8,7 @@ import { ThemeProvider } from '@mui/material';
 const HomePage = lazy(() => import('@pages/HomePage'));
 import theme from './configs/muiConfig';
 import RegisterPage from '@pages/RegisterPage';
+import AuthLayout from '@pages/AuthLayout';
 
 const router = createBrowserRouter([
     {
@@ -18,8 +19,13 @@ const router = createBrowserRouter([
                 element: <HomePage />,
             },
             {
-                path: '/register',
-                element: <RegisterPage />,
+                element: <AuthLayout />,
+                children: [
+                    {
+                        path: '/register',
+                        element: <RegisterPage />,
+                    },
+                ],
             },
         ],
     },

@@ -10,6 +10,7 @@ import theme from './configs/muiConfig';
 import RegisterPage from '@pages/auth/RegisterPage';
 import AuthLayout from '@pages/auth/AuthLayout';
 import LoginPage from '@pages/auth/LoginPage';
+import OTPVerifyPage from '@pages/auth/OTPVerifyPage';
 
 const router = createBrowserRouter([
     {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
                     {
                         path: '/login',
                         element: <LoginPage />,
+                    },
+                    {
+                        path: '/verify-otp',
+                        element: <OTPVerifyPage />,
                     },
                 ],
             },
